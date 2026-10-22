@@ -91,7 +91,7 @@ export default function AboutPage() {
               </ul>
               <p>对世界充满兴趣，也总是心怀戒备。</p>
               <p>
-                📮 <a href="mailto:lapiscafe@foxmail.com">lapiscafe@foxmail.com</a>　微信：shizhiyunzhe
+                📮 <a href="mailto:email@zxu.cc">email@zxu.cc</a>　微信：shizhiyunzhe
               </p>
             </div>
           </section>

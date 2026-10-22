@@ -26,7 +26,7 @@ const truncate = (text: string, max: number) =>
 
 export async function GET(context: APIContext) {
   const thoughts = await getSortedThoughts()
-  const site = context.site ?? new URL("https://www.lapis.cafe")
+  const site = context.site ?? new URL("https://uuu.re")
   const base = `${site.href.replace(/\/$/, "")}/thoughts/`
 
   return rss({

@@ -34,7 +34,7 @@ export default defineConfig({
   output: "static",
   // v7 默认值从 true 改成 'jsx'，会吃掉行内元素之间的空格。保持旧行为。
   compressHTML: true,
-  site: "https://www.lapis.cafe",
+  site: "https://uuu.re",
   trailingSlash: "always",
   alias: {
     "@": "./src",
