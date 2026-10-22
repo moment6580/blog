@@ -37,7 +37,7 @@ export function Footer() {
           <div className="md:flex md:justify-center">
             <div>
               <h4 className="text-sm font-medium text-foreground mb-4 uppercase tracking-wide">导航</h4>
-              <nav className="flex flex-col gap-3">
+              <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
               {[
                 { name: "首页", href: "/" },
                 { name: "时间线", href: "/timeline/" },
