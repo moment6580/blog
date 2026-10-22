@@ -9,25 +9,25 @@
  * 想用 comments.uuu.re，需要先把 uuu.re 接入 Cloudflare，再加 routes。
  */
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cwd-api",
-  "main": "src/index.ts",
-  "compatibility_date": "2026-01-03",
-  "compatibility_flags": ["nodejs_compat"],
-  "workers_dev": true,
-  "preview_urls": true,
-  "d1_databases": [
-    {
-      "binding": "CWD_DB",
-      "database_name": "cwd_db",
-      "database_id": "B8940625e-1c79-4884-8d06-e915e86f435f"
-    }
-  ],
-  "kv_namespaces": [
-    {
-      "binding": "CWD_AUTH_KV",
-      "id": "0390082b0daa4049a6802c3401c5b251",
-      "preview_id": "11dd6c1eeaec4e43be7977c38788acee"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cwd-api",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-01-03",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": true,
+	"preview_urls": true,
+	"d1_databases": [
+		{
+			"binding": "CWD_DB",
+			"database_name": "cwd_db",
+			"database_id": "8940625e-1c79-4884-8d06-e915e86f435f"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "CWD_AUTH_KV",
+			"id": "0390082b0daa4049a6802c3401c5b251",
+			"preview_id": "11dd6c1eeaec4e43be7977c38788acee"
+		}
+	]
 }
