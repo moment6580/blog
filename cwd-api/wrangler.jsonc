@@ -1,7 +1,7 @@
 /**
  * 部署前把下面三个占位符换成你自己的 Cloudflare 资源 ID：
  *
- *   npx wrangler d1 create cwd-db
+ *   npx wrangler d1 create cwd_db
  *   npx wrangler kv namespace create CWD_AUTH_KV
  *   npx wrangler kv namespace create CWD_AUTH_KV --preview
  *
@@ -19,15 +19,15 @@
   "d1_databases": [
     {
       "binding": "CWD_DB",
-      "database_name": "cwd-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+      "database_name": "cwd_db",
+      "database_id": "B8940625e-1c79-4884-8d06-e915e86f435f"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "CWD_AUTH_KV",
-      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID",
-      "preview_id": "REPLACE_WITH_YOUR_KV_PREVIEW_ID"
+      "id": "0390082b0daa4049a6802c3401c5b251",
+      "preview_id": "11dd6c1eeaec4e43be7977c38788acee"
     }
   ]
 }
