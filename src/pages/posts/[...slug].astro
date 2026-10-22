@@ -51,7 +51,7 @@ const description = buildMetaDescription(
   post.data.title,
   post.data.encrypted ?? false,
 )
-const title = `${post.data.title} | 时歌的博客`
+const title = `${post.data.title} | Zak's Blog`
 const publishedIso = post.data.published ? new Date(post.data.published).toISOString() : ""
 const updatedIso = post.data.updated ? new Date(post.data.updated).toISOString() : ""
 const category = (post.data.category ?? "").toString().trim()
@@ -68,11 +68,11 @@ const jsonLd = {
   mainEntityOfPage: canonicalUrl,
   author: {
     "@type": "Person",
-    name: "时歌",
+    name: "Zak",
   },
   publisher: {
     "@type": "Organization",
-    name: "时歌的博客",
+    name: "Zak's Blog",
   },
   keywords: tags.length ? tags.join(", ") : undefined,
   articleSection: category || undefined,

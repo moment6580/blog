@@ -19,7 +19,7 @@
     "enabled": true
   },
   "vars": {
-    "GH_REPO": "Lapis0x0/VermilionVoid",
+    "GH_REPO": "moment6580/blog",
     "GH_WORKFLOW": "sync-flomo.yml",
     "GH_REF": "main"
   }

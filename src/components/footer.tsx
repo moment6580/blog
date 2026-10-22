@@ -26,10 +26,10 @@ export function Footer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-foreground font-medium">时歌的博客</span>
+              <span className="text-foreground font-medium">Zak's Blog</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              理解以真实为本，但真实本身并不会自动呈现
+              记录、思考与折腾
             </p>
           </div>
 
@@ -97,16 +97,8 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/50 grid gap-4 md:grid-cols-3">
-          <p className="text-muted-foreground text-sm">© 2025 时歌. All rights reserved.</p>
-          <a
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-muted-foreground text-xs hover:text-foreground transition-colors duration-200 md:text-center"
-          >
-            辽ICP备2023010881号-1
-          </a>
+        <div className="mt-16 pt-8 border-t border-border/50 grid gap-4 md:grid-cols-2">
+          <p className="text-muted-foreground text-sm">© 2026 Zak. All rights reserved.</p>
           <a
             href="https://github.com/Lapis0x0/VermilionVoid"
             target="_blank"

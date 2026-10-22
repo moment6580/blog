@@ -141,7 +141,7 @@ export function Hero() {
           }`}
         >
           <p className="text-[0.65rem] sm:text-xs tracking-[0.4em] text-muted-foreground/60 uppercase mb-8">
-            Boundary of Thought
+            Zak's Blog
           </p>
 
           <h1 className="font-sans text-[min(10.5vw,3rem)] sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.1] mb-8 min-h-[1.2em] whitespace-nowrap">

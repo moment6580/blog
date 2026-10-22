@@ -30,7 +30,7 @@ export async function GET(context: APIContext) {
   const base = `${site.href.replace(/\/$/, "")}/thoughts/`
 
   return rss({
-    title: "时歌的偶得 | Boundary of Thought",
+    title: "Zak's Blog · 偶得",
     description: "日常的碎片思考与随手记录",
     site,
     items: thoughts.map((thought) => {

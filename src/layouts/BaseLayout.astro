@@ -18,8 +18,8 @@ interface Props {
   fontProfile?: "reading" | "interface"
 }
 
-const defaultTitle = "时歌的博客 | Boundary of Thought"
-const defaultDescription = "探索金融、社会与人工智能的交汇点"
+const defaultTitle = "Zak's Blog"
+const defaultDescription = "Zak 的个人博客，记录技术、阅读与生活。"
 
 const {
   title = defaultTitle,
@@ -68,7 +68,7 @@ const resolvedTwitterDescription = twitterDescription || description
     <meta property="og:title" content={resolvedOgTitle} />
     <meta property="og:description" content={resolvedOgDescription} />
     <meta property="og:url" content={resolvedOgUrl} />
-    <meta property="og:site_name" content="时歌的博客" />
+    <meta property="og:site_name" content="Zak's Blog" />
     <meta property="og:locale" content="zh_CN" />
     {resolvedOgImage ? <meta property="og:image" content={resolvedOgImage} /> : null}
     <meta name="twitter:card" content={resolvedTwitterCard} />
@@ -76,8 +76,8 @@ const resolvedTwitterDescription = twitterDescription || description
     <meta name="twitter:description" content={resolvedTwitterDescription} />
     {resolvedOgImage ? <meta name="twitter:image" content={resolvedOgImage} /> : null}
     <slot name="head" />
-    <link rel="alternate" type="application/rss+xml" title="时歌的博客" href="/rss.xml" />
-    <link rel="alternate" type="application/rss+xml" title="时歌的偶得" href="/thoughts/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Zak's Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Zak's Blog · 偶得" href="/thoughts/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {useHarmonySans ? <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin /> : null}
@@ -103,63 +103,6 @@ const resolvedTwitterDescription = twitterDescription || description
     <link rel="icon" href="/icon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-icon.png" />
-    <script is:inline>
-      ;(() => {
-        let analyticsLoaded = false
-        let clarityLoaded = false
-
-        const runWhenIdle = (callback) => {
-          if ("requestIdleCallback" in window) {
-            window.requestIdleCallback(callback, { timeout: 3000 })
-            return
-          }
-          window.setTimeout(callback, 1500)
-        }
-
-        const loadScript = (src) => {
-          const script = document.createElement("script")
-          script.async = true
-          script.src = src
-          document.head.appendChild(script)
-        }
-
-        const initAnalytics = () => {
-          if (analyticsLoaded) return
-          analyticsLoaded = true
-          window.dataLayer = window.dataLayer || []
-          window.gtag = function () {
-            window.dataLayer.push(arguments)
-          }
-          window.gtag("js", new Date())
-          window.gtag("config", "G-1DF2LNJPSY")
-          loadScript("https://www.googletagmanager.com/gtag/js?id=G-1DF2LNJPSY")
-        }
-
-        const initClarity = () => {
-          if (clarityLoaded || window.clarity) return
-          clarityLoaded = true
-          const clarity = function () {
-            clarity.q = clarity.q || []
-            clarity.q.push(Array.from(arguments))
-          }
-          window.clarity = clarity
-          loadScript("https://www.clarity.ms/tag/rkga1fxqqs")
-        }
-
-        const initTracking = () => {
-          runWhenIdle(() => {
-            initAnalytics()
-            initClarity()
-          })
-        }
-
-        if (document.readyState === "complete") {
-          initTracking()
-        } else {
-          window.addEventListener("load", initTracking, { once: true })
-        }
-      })()
-    </script>
     <script is:inline>
       // 主题初始化 - 防止页面加载闪烁
       (function() {

@@ -1,35 +1,33 @@
 /**
- * For more details on how to configure Wrangler, refer to:
- * https://developers.cloudflare.com/workers/wrangler/configuration/
+ * 部署前把下面三个占位符换成你自己的 Cloudflare 资源 ID：
+ *
+ *   npx wrangler d1 create cwd-db
+ *   npx wrangler kv namespace create CWD_AUTH_KV
+ *   npx wrangler kv namespace create CWD_AUTH_KV --preview
+ *
+ * 不配置 routes 时，Worker 会使用 https://cwd-api.<你的子域>.workers.dev。
+ * 想用 comments.uuu.re，需要先把 uuu.re 接入 Cloudflare，再加 routes。
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cwd-api",
   "main": "src/index.ts",
   "compatibility_date": "2026-01-03",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
   "preview_urls": true,
   "d1_databases": [
     {
       "binding": "CWD_DB",
       "database_name": "cwd-db",
-      "database_id": "5004e78c-0a40-44d2-b8b2-9eaacd28e9ea"
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "CWD_AUTH_KV",
-      "id": "367e2e3f489942fdbfaff9073ab7f0ad",
-      "preview_id": "26450f054c7a43b7ad8b1b631997e572"
-    }
-  ],
-  "routes": [
-    {
-      "pattern": "comments.lapis.cafe/*",
-      "zone_name": "lapis.cafe"
+      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID",
+      "preview_id": "REPLACE_WITH_YOUR_KV_PREVIEW_ID"
     }
   ]
 }
